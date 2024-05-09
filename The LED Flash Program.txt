@@ -1,0 +1,19 @@
+The LED Flash Program:
+#include<pic18f4550.h>
+void delay(int);
+sbit a=PB^2;
+sbit b=PB^3;
+sbit c=PB^4;
+sbit d=PB^5;
+void main()
+{
+TRISB=0x00;
+a=b=c=d=0x00;
+delay(10);
+a=b=c=d=0xFF;}
+void delay(int a )
+{
+unsigned char c;
+for(c=0;c<a;c++)
+for(c=0;c<250;c++);
+}
